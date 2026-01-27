@@ -8,22 +8,27 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    
+       //MARK: - Outlets
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    
+       //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      //MARK: - Behaviour
+    func setupUI(){
+        containerView.layer.cornerRadius = min(containerView.bounds.width, containerView.bounds.height) / 4
+        containerView.backgroundColor = UIColor.systemBackground.withAlphaComponent(0.2)
     }
-    */
 
 }
