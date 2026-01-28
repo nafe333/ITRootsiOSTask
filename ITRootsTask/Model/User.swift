@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct User {
+
+   //MARK: - Properties
+    
+    let phone: String
+    let password: String
+    
+}

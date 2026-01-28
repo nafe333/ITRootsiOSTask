@@ -7,11 +7,17 @@
 
 import UIKit
 
-class SectionsHeaderView: UICollectionViewCell {
+class SectionsHeaderView: UICollectionReusableView {
 
+    @IBOutlet weak var sectionHeaderLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(title: String) {
+        sectionHeaderLabel.text = title
     }
 
 }

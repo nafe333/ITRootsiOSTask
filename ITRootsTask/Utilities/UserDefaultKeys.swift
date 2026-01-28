@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum UserDefaultsKeys {
+    static let phone = "user_phone"
+    static let password = "user_password"
+    static let isLoggedIn = "is_logged_in"
+}
