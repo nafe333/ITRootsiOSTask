@@ -22,6 +22,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+setupCollectionView()
+        SettingsMenuHelper.addSettingsButton(to: self)
+    }
+    
+       //MARK: - Behaviour
+    private func setupCollectionView(){
         itemsCollectionView.collectionViewLayout = createLayout()
         itemsCollectionView.delegate = self
         itemsCollectionView.dataSource = self
@@ -34,7 +40,6 @@ class HomeViewController: UIViewController {
         )
     }
     
-       //MARK: - Behaviour
     private func createLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] sectionIndex, layoutEnvironment in
             guard let self = self else { return nil  }

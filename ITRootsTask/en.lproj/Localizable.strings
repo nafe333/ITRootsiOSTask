@@ -1,7 +1,18 @@
-/* 
-  Localizable.strings
-  ITRootsTask
-
-  Created by Nafea Elkassas on 28/01/2026.
-  
-*/
+"phoneNumberPlaceholder" = "Enter your phone number";
+"passwordPlaceholder" = "Enter your password";
+"loginButtonTitle" = "Log In";
+"registerButtonTitle" = "Register";
+"arabicToEnglishLabel" = "AR / EN";
+"homeTabBarTitle" = "Home";
+"postsTabBarTitle" = "Posts";
+"changeLanguageButtonTitle" = "Change Language";
+"logoutButtonTitle" = "Log Out";
+"storiesSectionTitle" = "Stories";
+"postersSectionTitle" = "Posters";
+"postsTitle" = "Posts";
+"englishLanguage" = "English";
+"arabicLanguage" = "Arabic";
+"cancel" = "Cancel";
+"fullNamePlaceholder" = "Full name";
+"emailPlaceholder" = "E-mail";
+"hoursLabel" = "2h ago";

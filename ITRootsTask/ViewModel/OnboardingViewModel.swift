@@ -22,20 +22,18 @@ class OnboardingViewModel {
     
        //MARK: - Behaviour
     func validate(phone: String, password: String) -> String? {
+
         guard validator.isValidPhone(phoneNumber: phone) else {
             return "Invalid phone number"
         }
-        guard validator.isValidPassword(password: password) else {
+
+        guard validator.isValidPassword(password) else {
             return "Weak password"
         }
+
         return nil
     }
-    
-    func register(phone: String, password: String) {
-            defaults.set(phone, forKey: UserDefaultsKeys.phone)
-            defaults.set(password, forKey: UserDefaultsKeys.password)
-            defaults.set(true, forKey: UserDefaultsKeys.isLoggedIn)
-        }
+
     
     func login(phone: String, password: String) -> Bool {
             let savedPhone = defaults.string(forKey: UserDefaultsKeys.phone)

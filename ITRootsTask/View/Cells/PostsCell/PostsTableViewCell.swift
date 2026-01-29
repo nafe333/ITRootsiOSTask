@@ -15,9 +15,13 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postDescriptionLabel: UILabel!
     
+    @IBOutlet weak var hoursLabel: UILabel!
+    
        //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        hoursLabel.text = NSLocalizedString("hoursLabel", comment: "")
+        
     }
 }

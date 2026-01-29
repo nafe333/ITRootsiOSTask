@@ -8,10 +8,10 @@
 import Foundation
 
 struct User {
-
-   //MARK: - Properties
-    
+       
+    let fullName: String
+    let email: String
     let phone: String
     let password: String
-    
 }
+

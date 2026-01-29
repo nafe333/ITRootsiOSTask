@@ -17,21 +17,24 @@ class HomeTabBarViewController: UITabBarController {
     }
     
        //MARK: - Behaviour
-    func tabBarInitialize(){
+    func tabBarInitialize() {
+
         let homeVC = HomeViewController(nibName: "HomeViewController", bundle: nil)
-           homeVC.tabBarItem = UITabBarItem(
-               title: "Home",
-               image: UIImage(systemName: "house"),
-               selectedImage: UIImage(systemName: "house.fill")
-           )
+        homeVC.tabBarItem = UITabBarItem(
+            title: NSLocalizedString("homeTabBarTitle", comment: ""),
+            image: UIImage(systemName: "house"),
+            selectedImage: UIImage(systemName: "house.fill")
+        )
         let homeNav = UINavigationController(rootViewController: homeVC)
-        
+
         let postsVC = PostsViewController(nibName: "PostsViewController", bundle: nil)
-        postsVC.tabBarItem = UITabBarItem(title: "Posts",
-                                          image: UIImage(systemName: "person.2.wave.2"),
-                                          selectedImage: UIImage(systemName: "person.2.wave.2.fill"))
+        postsVC.tabBarItem = UITabBarItem(
+            title: NSLocalizedString("postsTabBarTitle", comment: ""),
+            image: UIImage(systemName: "person.2.wave.2"),
+            selectedImage: UIImage(systemName: "person.2.wave.2.fill")
+        )
         let postsNav = UINavigationController(rootViewController: postsVC)
-        
+
         UITabBar.appearance().tintColor = UIColor(named: "MainColor")
         UITabBar.appearance().unselectedItemTintColor = .gray
 

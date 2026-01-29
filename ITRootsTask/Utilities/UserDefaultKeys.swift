@@ -11,4 +11,7 @@ enum UserDefaultsKeys {
     static let phone = "user_phone"
     static let password = "user_password"
     static let isLoggedIn = "is_logged_in"
+    static let appLanguage = "appLanguage"
+    static let fullName = "fullName"
+    static let email = "email"
 }

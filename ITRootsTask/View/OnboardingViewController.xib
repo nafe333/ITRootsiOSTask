@@ -11,7 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="ITRootsTask" customModuleProvider="target">
             <connections>
+                <outlet property="arabicToEnglishLabel" destination="V7o-V9-Y1b" id="nOt-Ff-DMr"/>
                 <outlet property="containerView" destination="vJn-Lm-d7a" id="Ar7-qh-jS3"/>
+                <outlet property="languageSwitch" destination="2oB-WM-acN" id="P1w-8i-lq1"/>
                 <outlet property="loginButton" destination="XzG-np-JAk" id="ecc-jY-HtM"/>
                 <outlet property="passwordTextField" destination="rKO-hW-Vje" id="iYi-7w-orV"/>
                 <outlet property="phoneNumberTextField" destination="AmW-F3-7Fx" id="pn3-Ff-naG"/>
@@ -41,13 +43,13 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-F3-7Fx">
                                                 <rect key="frame" x="34.666666666666657" y="16" width="276" height="28.666666666666671"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKO-hW-Vje">
                                                 <rect key="frame" x="34.666666666666657" y="60.666666666666679" width="276" height="28.666666666666664"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
@@ -136,6 +138,9 @@
         <namedColor name="MainColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

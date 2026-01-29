@@ -14,12 +14,22 @@ class Validator {
         phoneNumber.count == 11
     }
 
-    func isValidPassword(password: String) -> Bool {
-        password.count > 6
+    func isValidPassword(_ password: String) -> Bool {
+        let regex = "^[A-Za-z0-9]{6,}$"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: password)
     }
     
-    func isDataValid(phoneNumber: String, password: String) -> Bool {
-     isValidPhone(phoneNumber: phoneNumber) && isValidPassword(password: password)
+
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let regex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: email)
     }
+    
+    func isValidName(_ name: String) -> Bool {
+        let regex = "^[A-Za-z]{2,}$"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: name)
+    }
+
 
 }

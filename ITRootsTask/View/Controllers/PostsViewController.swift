@@ -23,6 +23,7 @@ class PostsViewController: UIViewController {
         setupTableView()
         bindViewModel()
         viewModel.fetchPosts()
+        SettingsMenuHelper.addSettingsButton(to: self)
         
     }
 
@@ -37,18 +38,38 @@ class PostsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-            viewModel.onDataUpdated = { [weak self] in
+        viewModel.onDataUpdated = { [weak self] in
+            DispatchQueue.main.async {
                 self?.postsTableView.reloadData()
             }
+        }
 
-            viewModel.onError = { [weak self] message in
-                let alert = UIAlertController(title: "Error",
-                                              message: message,
-                                              preferredStyle: .alert)
+        viewModel.onOfflineDataLoaded = { [weak self] in
+            DispatchQueue.main.async {
+                let alert = UIAlertController(
+                    title: "No Internet Connection",
+                    message: "You are currently offline. Displaying saved data.",
+                    preferredStyle: .alert
+                )
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 self?.present(alert, animated: true)
             }
         }
+
+        viewModel.onError = { [weak self] message in
+            DispatchQueue.main.async {
+                let alert = UIAlertController(
+                    title: "Error",
+                    message: message,
+                    preferredStyle: .alert
+                )
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                self?.present(alert, animated: true)
+            }
+        }
+    }
+
+
 
 }
 

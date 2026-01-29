@@ -1,1 +1,19 @@
+"phoneNumberPlaceholder" = "أدخل رقم هاتفك";
+"passwordPlaceholder" = "أدخل كلمة السر";
+"loginButtonTitle" = "سجل الدخول";
+"registerButtonTitle" = "تسجيل حساب";
+"arabicToEnglishLabel" = "الإنجليزية / العربية";
+"homeTabBarTitle" = "الرئيسية";
+"postsTabBarTitle" = "المنشورات";
+"changeLanguageButtonTitle" = "تغيير اللغة";
+"logoutButtonTitle" = "تسجيل الخروج";
+"storiesSectionTitle" = "الحالة";
+"postersSectionTitle" = "البوسترات";
+"postsTitle" = "المنشورات";
+"englishLanguage" = "الإنجليزية";
+"arabicLanguage" = "العربية";
+"cancel" = "إلغاء";
+"fullNamePlaceholder" = "الإسم بالكامل";
+"emailPlaceholder" = "الإيميل";
+"hoursLabel" = "منذ ساعتين";
 

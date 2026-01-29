@@ -26,9 +26,9 @@ enum ItemSection {
     var title: String {
         switch self {
         case .stories:
-            return "Stories"
+            return NSLocalizedString("storiesSectionTitle", comment: "")
         case .poster:
-            return "Posters"
+            return NSLocalizedString("postersSectionTitle", comment: "")
             
         }
     }

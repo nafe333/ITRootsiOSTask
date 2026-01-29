@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MOLH
 
 class SectionsHeaderView: UICollectionReusableView {
 
@@ -18,6 +19,8 @@ class SectionsHeaderView: UICollectionReusableView {
     
     func configure(title: String) {
         sectionHeaderLabel.text = title
+        sectionHeaderLabel.textAlignment = MOLHLanguage.currentAppleLanguage() == "ar" ? .right : .left
+
     }
 
 }
